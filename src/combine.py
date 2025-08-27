@@ -17,7 +17,7 @@ def union_candidates(rule_c, bm25_c, dense_c, k=15, w_rule=1.0, w_bm25=0.2, w_de
 def decide_labels(rerank_scores: dict[str,float],
                   rule_hits: dict[str,float],
                   sector: str,
-                  global_tau=0.6,
+                  global_tau=0.0,
                   max_labels=3):
     # sector gating example (toy)
     blocked = set()

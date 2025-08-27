@@ -4,7 +4,7 @@ import pandas as pd
 def load_companies(path: str) -> pd.DataFrame:
     df = pd.read_csv(path)
     # normalize expected columns
-    expected = ["name","description","business_tags","sector","category","niche"]
+    expected = ["description","business_tags","sector","category","niche"]
     missing = [c for c in expected if c not in df.columns]
     if missing: raise ValueError(f"Missing columns: {missing}")
     return df
